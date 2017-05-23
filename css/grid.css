@@ -1,0 +1,100 @@
+.grid__column-12 { width: 100%; }
+.grid__column-11 { width: 91.666666666667%; }
+.grid__column-10 { width: 83.333333333333%; }
+.grid__column-9 {  width: 75%; }
+.grid__column-8 {  width: 66.666666666667%; }
+.grid__column-7 {  width: 58.333333333333%; }
+.grid__column-6 {  width: 50%; }
+.grid__column-5 {  width: 41.666666666667%; }
+.grid__column-4 {  width: 33.333333333333%; }
+.grid__column-3 {  width: 25%; }
+.grid__column-2 {  width: 16.666666666667%; }
+.grid__column-1 {  width: 8.333333333333%; }
+
+* {
+    box-sizing: border-box;
+}
+.grid__wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container {
+    display: block;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.grid__row {
+    display: block;
+    margin: 0 -12px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.grid__wrapper:after,
+.grid__container:after,
+.grid__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.grid__offset-top { margin-top: 50px}
+
+.grid__column-12,
+.grid__column-11,
+.grid__column-10,
+.grid__column-9,
+.grid__column-8,
+.grid__column-7,
+.grid__column-6,
+.grid__column-5,
+.grid__column-4,
+.grid__column-3,
+.grid__column-2,
+.grid__column-1 {
+    position: relative;
+    float: left;
+    padding: 0px;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: center;
+}
+
+header {background: #008CBA;color:white;}
+footer {background: #008CBA;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:center;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    .footer {-webkit-order:3;order:3;}
+}
+h1 {
+    text-align: center
+}
